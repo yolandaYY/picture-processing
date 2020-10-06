@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>像素化</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            text-align: center;
+            padding: 1%;
+            height: 80vh;
+            line-height: 80vh;
+        }
+
+        #command-bar {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 5%;
+        }
+
+        #upload {
+            display: none;
+        }
+
+        .btn {
+            background-color: #29B6F6;
+            color: #fff;
+            display: inline-block;
+            padding: 0.5em;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 1rem;
+            user-select: none;
+        }
+        .assist {
+            margin-bottom: 1em;
+            visibility: hidden;
+        }
+        #range > span{
+            color: #29B6F6;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <canvas id="canvas"></canvas>
+    </div>
+    <div id="command-bar">
+        <div class="assist">
+            <input id="range" type="range" value="1" min="1" max="10">
+            <span id="range-text">1</span>
+        </div>
+        <div class="btn" id="upload-image-btn">更换图片</div>
+        <div class="btn" id="stringfy-btn">字符化</div>
+        <div class="btn" id="pixelate-btn">像素化</div>
+        <div class="btn" id="compress-btn">压缩</div>
+        <div class="btn">换色</div>
+        <div class="btn">保存图片</div>
+    </div>
+    <input type="file" id="upload" name="image" accept="image/*" />
+    <script src="./index.js"></script>
+</body>
+
+</html>
